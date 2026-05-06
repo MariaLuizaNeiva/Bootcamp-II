@@ -1,22 +1,48 @@
-# 🍎 Nutrilog - Evolução e Entrega Contínua
+# NutriLog CLI 🍎💧
 
-> **Link do Deploy:** [https://nutrilog-marialuiza.onrender.com/] 🚀
+[![CI Pipeline](https://github.com/Maria-Luiza-Neiva/Desafio-inicial---Bootcamp-II/actions/workflows/ci.yml/badge.svg)](https://github.com/MariaLuizaNeiva/Desafio-inicial---Bootcamp-II/actions)
 
-## 📋 Sobre o Projeto
-O Nutrilog é uma aplicação focada em saúde e bem-estar, desenvolvida como parte da **Etapa 2 (Entrega Intermediária)** do Bootcamp. Nesta fase, o sistema evoluiu para consumir dados do mundo real através de APIs públicas.
+## 📝 Sobre o Projeto
+O **NutriLog CLI** é uma aplicação de linha de comando desenvolvida para ajudar estudantes e profissionais de tecnologia a manterem hábitos saudáveis durante a jornada de trabalho e estudos.
 
-## 🚀 Novas Funcionalidades (Etapa 2)
-- **Integração com API Pública:** Agora o sistema consulta automaticamente a base de dados do [Open Food Facts](https://world.openfoodfacts.org/) para recuperar informações nutricionais reais via código de barras.
-- **Gestão de Demandas:** Desenvolvimento orientado a issues no GitHub e fluxo de ramificação (branching).
-- **Testes de Integração:** Implementação de testes automatizados para validar a comunicação com serviços externos.
-- **CI/CD:** Pipeline configurada via GitHub Actions para garantir a qualidade em cada commit.
+Muitas vezes, mergulhados no código ou nas aulas, esquecemos do básico: beber água e bater a meta de nutrientes. Este software resolve essa "dor" de forma rápida e profissional, sem que o usuário precise sair do seu ambiente de desenvolvimento (terminal).
 
-## 🛠️ Tecnologias Utilizadas
-- **Linguagem:** Python 3.7.4+
-- **Bibliotecas:** `requests` (HTTP), `unittest` (Testes)
-- **Infraestrutura:** GitHub Actions, Git
+### 🎯 Definição do Problema (Dor Real)
+* **Qual problema estou resolvendo?** A dificuldade de monitorar hábitos básicos de saúde (água e alimentação) durante períodos de alto foco mental.
+* **Quem é afetado?** Estudantes de Ciência da Computação e desenvolvedores que passam longas horas sentados em frente ao computador.
+* **Como a aplicação ajuda?** Oferece uma interface simples para registro instantâneo, gerando um feedback visual imediato sobre o que ainda falta para atingir as metas do dia.
+* **Fluxo de uso:** O usuário registra a quantidade (ex: 500ml de água) e o sistema atualiza o progresso diário, persistindo os dados para consulta.
 
-## 🧪 Como rodar os testes
-Para garantir que a integração com a API está funcionando, execute:
+---
+
+## 🚀 Tecnologias Utilizadas
+* **Linguagem:** [Python 3.10+](https://www.python.org/)
+* **Gerenciador de Dependências:** Pip (via `requirements.txt`)
+* **Testes Automatizados:** [Pytest](https://docs.pytest.org/)
+* **Linter / Análise Estática:** [Flake8](https://flake8.pycqa.org/)
+* **CI/CD:** [GitHub Actions](https://github.com/features/actions) (Pipeline de Integração Contínua)
+* **Versionamento Semântico:** [SemVer](https://semver.org/)
+
+---
+
+## 🛠️ Como Executar o Projeto
+
+### 1. Pré-requisitos
+* Ter o Python instalado (v3.10 ou superior).
+* Ter o Git configurado.
+
+### 2. Instalação e Configuração
 ```bash
-python -m unittest tests/test_integracao_api.py
+# Clone o repositório
+git clone https://github.com/MariaLuizaNeiva/Desafio-inicial---Bootcamp-II.git
+cd Desafio-inicial---Bootcamp-II
+
+# Crie o ambiente virtual
+python -m venv venv
+
+# Ative o ambiente virtual (Windows)
+.\venv\Scripts\activate
+
+# Instale as dependências
+pip install -r requirements.txt
+``` 
