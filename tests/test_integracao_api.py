@@ -6,8 +6,9 @@ class TestIntegracaoAPI(unittest.TestCase):
     
     @patch('src.api_nutricao.requests.get')
     def test_deve_retornar_dados_ao_consultar_codigo_valido(self, mock_get):
-        # Simulamos uma resposta de sucesso da API sem precisar de internet
-        mock_get.return_code = 200
+        # Aqui nós "fingimos" a resposta da API. 
+        # Assim, o teste passa mesmo se a internet do GitHub falhar.
+        mock_get.return_value.status_code = 200
         mock_get.return_value.json.return_value = {
             "status": 1,
             "product": {
