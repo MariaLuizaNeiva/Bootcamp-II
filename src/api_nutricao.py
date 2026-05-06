@@ -5,7 +5,7 @@ def buscar_dados_alimento(codigo_barras):
     url = f"https://world.openfoodfacts.org/api/v0/product/{codigo_barras}.json"
     
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, timeout=30)
         # Verifica se a requisição foi bem sucedida (Critério 1.2 e 1.3)
         if response.status_code == 200:
             dados = response.json()
